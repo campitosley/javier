@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Kuicho Promociones</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="estilos.css" />
+        <link rel="stylesheet" href="imagenes-javier/estilos-kuicho.css">
+    </head>
+    <body>
+        <div class="fb-like" data-href="http://kuicho.com" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" style="float:left;"></div>
+        
+        <h1>Kuicho Tepoztlan</h1>
+       <!-- Compatir facdbook -->
+
+<!-- Navegacion-->
+
+      <div class="container">
+
+        <div class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+                <a class="navbar-brand" href="#">Kuicho Tepoztlan</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                  <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Servicios <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a id="hoteles" href="#"><span class="glyphicon glyphicon-briefcase"></span>   Hoteles</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-cutlery"></span>    Restaurantes</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-gift"></span>   Tiendas de artesanías</a></li>
+                     <li><a href="#"><span class="glyphicon glyphicon-leaf"></span>  Temazcales</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-plus-sign"></span>    Médicos</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-phone"></span>    Policía</a></li>
+                  </ul>
+                </li>
+                <li class="active"><a href="#">Inicio</a></li>
+                <li><a href="#about">Paquetes</a></li>
+                <li><a href="#contact">Promociones</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+<!-- Termina navegacion -->
+
+<!-- Inicia promociones  -->
+        <div id="inicio">
+            
+        </div>
+   
+        <div class="publicidad">
+        <div class="publicidad-encabezado">
+            <div class="numero-uno">
+                1
+            </div>
+            <h2 id="mi-promo1-mensaje"></h2>
+        </div>
+        <img id="esquina" src="esquina-inferior.png">
+        <img class="imagenes-publicidad" src="http://campitos.cfapps.io/servicio-imagenes/leer-imagen-monguito/promo1"/>
+        <img id="esquina-derecha"  src="esquina-inferior-derecha.png">
+        </div>
+
+    
+
+    
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/docs.min.js"></script>
+    <script src="js/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#hoteles").click(function(){
+        $.scrollTo($("#informacion-hoteles"),800);
+        });
+        
+        $.ajax({
+            type:'get',
+            dataType:'jsonp',
+            contentType:'application/jsonp',
+            url: "http://campitos.cfapps.io/servicio-imagenes/jsonp?callback=?",
+            data:{
+                
+            },
+            success:function(response){
+               // alert(response[1].mensaje);
+               /* Aqui iran todos los valores para cada promo*/
+               $("#mi-promo1-mensaje").html("<h2>"+response[1].mensaje+"</h2>\n\
+                <p>Nos encontramos en "+response[1].direccion+"</p>");
+            },
+            error:function(){
+                alert("POST fallo");
+            }
+             
+        });
+     
+    });
+    </script>
+        </body>
+</html>
