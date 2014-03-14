@@ -190,6 +190,34 @@ z-index: -99;
   letter-spacing: -1px;
 }
 
+/*  Columans catalogos */
+.columna-izquierda{
+    padding: 7px;
+}
+.columna-izquierda h3{
+    font-size: 16px;
+     font-weight:  bold;
+     color:  #38843a;
+}
+.columna-izquierda img{
+    width: 100%;
+     height:100%;
+    max-width: 620px;
+   
+}
+h4{
+     color: #376699;
+     font-size: 16px;
+     font-weight: bolder;
+}
+
+.columna-derecha{
+  
+}
+.margenes{
+    border: #c0c0c0 thin solid;
+}
+
 
 
 /* RESPONSIVE CSS
