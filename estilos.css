@@ -220,6 +220,16 @@ h4{
 
 
 
+.fb-comments, .fb-comments * {
+    width:100% !important;
+}
+#facebook-movil{
+    display: none;
+}
+#facebook-desktop{
+    display: block;
+}
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
@@ -270,7 +280,10 @@ h4{
   
   
 }
-
+/******************************************************************************************************
+INICIAL RESPONSIVO CELULARES
+*******************************************************************************************************
+*/
 @media(max-width:500px){
     .carousel {
   height: 300px;
@@ -308,7 +321,7 @@ h4{
 
 }
 .imagenes-publicidad{
-    margin-top: 120px;
+    margin-top: 20px;
     width:320px;
      margin: 0 auto;
 
@@ -316,8 +329,32 @@ h4{
 }
 #esquina-derecha{
     display: none;
+   }
+   
+ .fb-comments, .fb-comments * {
+    width:100% !important;
+   
+
+  
 }
+
+#facebook-desktop{
+    display:none;
 }
+#facebook-movil{
+    display:block;
+}
+
+
+.contenedores{
+    margin-top: -160px;
+}
+
+
+ 
+
+}
+/* TERMINA RESPONSIVO PARA TELEFONO     */
 
 
 
@@ -343,3 +380,5 @@ h4{
     text-align: center;
     
 }
+
+

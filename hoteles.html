@@ -11,18 +11,21 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="estilos.css" />
-        <link rel="stylesheet" href="imagenes-javier/estilos-kuicho.css">
+       <link rel="stylesheet" href="imagenes-javier/estilos-kuicho.css"> 
     </head>
     <body>
                 <!--facebook -->
+<div id="fb-root"></div>
+<div id="fb-root"></div>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=697710973584460";
+  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=1475259909356554";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="container">
     
     <center> <div class="fb-like" data-href="http://kuicho.com/restaurantes.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" style="margin:0 auto;margin-top:5px;text-align:center;"></div></center>
@@ -95,28 +98,33 @@ and open the template in the editor.
           
         </div>
 <!--
+
 *************************************************************************************************************************************
 INICIA CATALOGO A DOS COLUMNAS
 
 **************************************************************************************************************************************
 -->
-    <div class="container-fluid ">
+    <div class="container-fluid contenedores ">
         <div class="row">
             <div class="col-md-6 columna-izquierda margenes">
-                <h2>Imagen 1</h2>
+                <h2 id="titulo-hotel">Titulo del hotel</h2>
                 <center> <img class="margenes" src="imagenes-javier/catalogo-hotel1.jpg"></center>
                 <h3>30% de descuento si reservas en las próximas 24 horas</h3>
                 <p>Checa nuestros precios o llamanos al Tel. 66 55 44 55</p>
                 <a class="btn btn-success">Checar prcios</a>
             </div>
-            <div class="col-md-6 columna-izquierda margenes">
+            <div class="col-md-6 columna-izquierda">
                 <h2>Descripcion 1</h2>
                 <center><h4>Hotel Casino Royal</h4></center>
                 <p>Nuestro servicio es de primer nivel, contamos con jacuzzi en la mayoria
                 de las habitaciones, servicio de lavandería, spa y guardería las 24
                  horas del día</p>
-                    
-             </div>
+                 <center>
+                <h2>Dudas comentarios</h2>
+                <p>¿Tienes alguna duda o comentario de ésta promoción?. ¡Preguntanos!</p>
+                <div class="fb-comments" id="facebook-desktop"   data-href="http://kuicho.com/hoteles.html" data-numposts="5" data-colorscheme="light"></div>   
+                <div class="fb-comments" id="facebook-movil" data-width="320" data-href="http://kuicho.com/hoteles.html" data-numposts="5" data-colorscheme="light"></div></center>    
+            </div>
         </div>
         <div class="container-fluid">
         <div class="row">
@@ -154,7 +162,7 @@ INICIA CATALOGO A DOS COLUMNAS
             type:'get',
             dataType:'jsonp',
             contentType:'application/jsonp',
-            url: "http://campitos.cfapps.io/servicio-imagenes/jsonp?callback=?",
+            url: "http://campitos-ley.whelastic.net/servicio-imagenes/jsonp?callback=?",
             data:{
                 
             },
@@ -162,7 +170,8 @@ INICIA CATALOGO A DOS COLUMNAS
                // alert(response[1].mensaje);
                /* Aqui iran todos los valores para cada promo*/
                $("#mi-promo1-mensaje").html("<center><h2>"+response[2].mensaje+"</h2></center><center><br><br><br> <p>"+response[2].direccion+"</p></center>");
-            },
+               $("#titulo-hotel").html(response[2].mensaje)
+           },
             error:function(){
                 alert("POST fallo");
             }

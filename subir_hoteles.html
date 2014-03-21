@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+    </head>
+    <body>
+        <div>Administracion de hoteles</div>
+        <input type="radio" id="primero" name="hola" value="Hola" />Opcion1<br>
+         <input type="radio" id="segundo" name="hola" value="Hola 2" />Opcion1<br>
+         <input type="button" id="boton" value="ver" />
+         
+          <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/docs.min.js"></script>
+    <script src="js/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#boton").click(function(){
+if($('#segundo').is(':checked')) { alert("it's checked"); }
+else{
+    alert('noooo');
+}
+        });
+    });
+    </script>
+    </body>
+</html>
