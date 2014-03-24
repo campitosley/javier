@@ -13,9 +13,7 @@ and open the template in the editor.
     </head>
     <body>
         <div>Administracion de hoteles</div>
-        <input type="radio" id="primero" name="hola" value="Hola" />Opcion1<br>
-         <input type="radio" id="segundo" name="hola" value="Hola 2" />Opcion1<br>
-         <input type="button" id="boton" value="ver" />
+       
          
           <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -23,6 +21,18 @@ and open the template in the editor.
     <script src="js/jquery-scrollTo/jquery.scrollTo.min.js"></script>
     <script>
     $(document).ready(function(){
+        
+         $.ajaxSetup({ cache: true });
+  $.getScript('//connect.facebook.net/en_UK/all.js', function(){
+    FB.init({
+      appId: '697710973584460'
+    });     
+    $('#loginbutton,#feedbutton').removeAttr('disabled');
+    FB.getLoginStatus(updateStatusCallback);
+  });
+        
+        
+        
         $("#boton").click(function(){
 if($('#segundo').is(':checked')) { alert("it's checked"); }
 else{
@@ -31,5 +41,14 @@ else{
         });
     });
     </script>
+    
+    <!-- The data encoding type, enctype, MUST be specified as below -->
+<form enctype="multipart/form-data" action="subir_hoteles.php" method="POST">
+    <!-- MAX_FILE_SIZE must precede the file input field -->
+    <input type="hidden" name="MAX_FILE_SIZE" value="300000" />
+    <!-- Name of input element determines name in $_FILES array -->
+    Send this file: <input name="userfile" type="file" />
+    <input type="submit" value="Send File" />
+</form>
     </body>
 </html>

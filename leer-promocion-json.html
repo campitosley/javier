@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+   
+    
+    <body>
+        <h1>EScoge un id</h1>
+        <input type="text"  id="valor"><br>
+        <input type="button" id="boton" value="obtener">
+        <div id="resultado"></div>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/docs.min.js"></script>
+    <script src="js/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+      <script>
+       $(document).ready(function(){
+           
+         $("#boton").click(function(){  
+        $.ajax({
+            dataType:'json',
+            type:'get',
+            url:'busqueda-son.php',
+            data:{
+                valor:$("#valor").val()
+            },
+            contentType:'application/json',
+            success:function(resultado){
+               // alert(resultado[0].mensaje);
+               //alert("Numero de elementos:"+resultado.length);
+              // alert("hasta aqui todo bien, tamanio:"+resultado[0].mensaje);
+              $("#resultado").html(resultado[0].mensaje);
+            },
+            error: function (malo) {
+                 alert(' fallo gachamente');
+              }
+           });
+        });
+       }) ;
+      </script>
+    </body>
+</html>
