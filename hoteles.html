@@ -170,7 +170,7 @@ INICIA CATALOGO A DOS COLUMNAS
                // alert(response[1].mensaje);
                /* Aqui iran todos los valores para cada promo*/
                $("#mi-promo1-mensaje").html("<center><h2>"+response[2].mensaje+"</h2></center><center><br><br><br> <p>"+response[2].direccion+"</p></center>");
-               $("#titulo-hotel").html(response[2].mensaje)
+               $("#titulo-hotel").html(response[2].mensaje);
            },
             error:function(){
                 alert("POST fallo");
