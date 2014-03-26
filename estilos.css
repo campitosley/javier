@@ -230,6 +230,19 @@ h4{
     display: block;
 }
 
+.map_canvas{
+    width:480px;
+    height: 280px;
+    background: #38843a;
+    margin:  0 auto;
+     border:#c0c0c0 solid thin;
+}
+.ubiacion-exacta{
+     margin-top: -100px;
+     position: relative;
+     z-index:90;
+}
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
@@ -288,6 +301,14 @@ INICIAL RESPONSIVO CELULARES
     .carousel {
   height: 300px;
   margin-bottom: 60px;
+}
+
+.map_canvas{
+    width:300px;
+    height: 280px;
+    background: #38843a;
+    margin:  0 auto;
+    border:#38843a solid thin;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -387,3 +408,4 @@ INICIAL RESPONSIVO CELULARES
      width:10px;
      height:10px;
 }
+
