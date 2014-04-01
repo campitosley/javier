@@ -28,16 +28,16 @@ and open the template in the editor.
         $.ajax({
             dataType:'json',
             type:'get',
-            url:'busqueda-son.php',
+            url:'generar-promociones.php',
             data:{
-                valor:$("#valor").val()
+               // valor:$("#valor").val()
             },
             contentType:'application/json',
             success:function(resultado){
                // alert(resultado[0].mensaje);
                //alert("Numero de elementos:"+resultado.length);
               // alert("hasta aqui todo bien, tamanio:"+resultado[0].mensaje);
-              $("#resultado").html(resultado[0].mensaje);
+              $("#resultado").html(resultado[0].imagen);
             },
             error: function (malo) {
                  alert(' fallo gachamente');

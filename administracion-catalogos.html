@@ -27,7 +27,10 @@
 		</header>
         <form  name="formita" id="formita" action="administracion-catalogos.php" enctype="multipart/form-data" method="post" accept-charset="utf-8">
         <div class="container">
-           
+        <h2>Instrucciones</h2>
+                    <p>Llena todos los campos, la direccion se llenara automáticamente al seleccionar un punto en el mapa. Una vez llenados los datos del catalogo, para localizarlo en el mapa, haz zoom en el mapa hasta encontrar la direccion deseada, despues haz click sobre 
+                        el mapa, aparecera un globito rojo de geolocalziacion, esa sera la ubicacion que quedara al oprimir el boton de abajo que dice Guardar Todo.<br>
+                     Si pierdes de vista el globito da click sobre la pantalla nuevamente , no importa que haya más de un globo en pantalla, se guardará la ubicacion del último globo que utilices.</p>    
         <div class="col-md-4">
             <div class="row">
                 <h3>Catálogo para:</h3>
@@ -55,7 +58,7 @@
                 <H2>Direccion</H2>
             </div>
              <div class="row">
-               <textarea id="direccion" name="direccion" rows="4" cols="30">
+                 <textarea id="direccion" name="direccion" readonly rows="4" cols="30">
                 </textarea>
             </div>
              
@@ -65,7 +68,7 @@
   <!--   MAX_FILE_SIZE must precede the file input field -->
     <input type="hidden" name="MAX_FILE_SIZE" value="300000" />
     <!-- Name of input element determines name in $_FILES array -->
-    <h3> Cargar imagen de este catálogo:</h3> <input name="userfile" type="file" class="btn btn-success" title="archivo"/>
+    <h3> Cargar imagen de este catálogo:</h3> <input name="userfile" type="file" class="btn btn-success" title="archivo"/><br>
 
 <!--</form>-->
             </div>
@@ -73,10 +76,7 @@
         
         
 		<div class="container_16">
-                    <h2>Instrucciones</h2>
-                    <p>Una vez llenados los datos del catalogo, para localizarlo en el mapa, haz zoom en el mapa hasta encontrar la direccion deseada, despues haz click sobre 
-                        el mapa, aparecera un globito rojo de geolocalziacion, esa sera la ubicacion que quedara al oprimir el boton de abajo que dice Guardar Todo.<br>
-                     Si pierdes de vista el globito da click sobre la pantalla nuevamente , no importa que haya más de un globo en pantalla, se guardará la ubicacion del último globo que utilices.</p>
+                   
 			<article class="grid_16">
 				<div class="item rounded dark">
 					<div id="map_canvas" class="map rounded"></div>

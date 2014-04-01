@@ -49,23 +49,34 @@ $titulo=$_POST["direccion"];
 $mensaje=$_POST["mensaje"];
 
 
+// La sig ruta solo es para guardar en json
+$ruta;
+
 //subios el archivo
 $uploaddir = '/home/campitoskuicho/public_html/archivos-hoteles/';
+$ruta="http://kuicho.com/archivos-hoteles/";
 if($promo=="promo1"){
 $uploaddir = '/home/campitoskuicho/public_html/archivos-hoteles/';
+$ruta="http://kuicho.com/archivos-hoteles/";
 }
 if($promo=="promo2"){
     $uploaddir = '/home/campitoskuicho/public_html/archivos-restaurantes/';
+    $ruta="http://kuicho.com/archivos-restaurantes/";
 }
 if($promo=="promo3"){
     $uploaddir = '/home/campitoskuicho/public_html/archivos-artesanias/';
+      $ruta="http://kuicho.com/archivos-artesanias/";
 }
 if($promo=="promo4"){
     $uploaddir = '/home/campitoskuicho/public_html/archivos-temascales/';
+      $ruta="http://kuicho.com/archivos-temascales/";
 }
 
 
 $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
+// El siguiente es solo para json
+$ruta=$ruta.basename($_FILES['userfile']['name']);
+
 
 $posicion=str_replace('(','',$posicion);
 $posicion=$posicion=str_replace(')','',$posicion);
@@ -80,6 +91,23 @@ if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
 } else {
     $respuesta= "Posble ataque".$uploadfile;
 }
+//ESTABLECEMOS LA CONEXION
+// Create connection
+$con=mysqli_connect("localhost","campitos","celiesita","imagenes");
+
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+  else{
+      echo'te conectaste adecuadamente'.'<br>';
+     //Insertamoe n la tabla informacion:
+     mysqli_query($con,"INSERT INTO informacion (promocion,mensaje, direccion,imagen,posicion)"
+             ." VALUES ('$promo', '$mensaje','$titulo','$ruta','$posicion')");
+  }
+echo 'registro insertado correctamente'.'<br>';
+// echo 'Se hizo la insercion'.'<br>';
 
 $fecha=date("F j, Y, g:i a");  
 

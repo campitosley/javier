@@ -113,7 +113,7 @@ INICIA CATALOGO A DOS COLUMNAS
         <div class="row">
             <div class="col-md-6 columna-izquierda margenes">
                 <h2 id="titulo-hotel">Titulo del hotel</h2>
-                <center> <img class="margenes" src="imagenes-javier/catalogo-hotel1.jpg"></center>
+                <center> <img class="margenes" id="uno" src="imagenes-javier/catalogo-hotel1.jpg"></center>
                 <h3>30% de descuento si reservas en las próximas 24 horas</h3>
                 <p>Checa nuestros precios o llamanos al Tel. 66 55 44 55</p>
                 <a class="btn btn-success">Checar prcios</a>
@@ -185,7 +185,7 @@ INICIA CATALOGO A DOS COLUMNAS
         $("#hoteles").click(function(){
         $.scrollTo($("#informacion-hoteles"),800);
         });
-        
+        //primer ajax para que se cargue la promocion del encabezado
         $.ajax({
             type:'get',
             dataType:'jsonp',
@@ -205,6 +205,27 @@ INICIA CATALOGO A DOS COLUMNAS
             }
              
         });
+        
+        //SEGUNDO AJAX PARA QUE SE CARGUEN TODOS LOS CATALOGOS
+        $.ajax({
+            dataType:'json',
+            type:'get',
+            url:'generar-promociones.php',
+            data:{
+               // valor:$("#valor").val()
+            },
+            contentType:'application/json',
+            success:function(resultado){
+               // alert(resultado[0].mensaje);
+               //alert("Numero de elementos:"+resultado.length);
+              // alert("hasta aqui todo bien, tamanio:"+resultado[0].mensaje);
+              //$("#resultado").html(resultado[0].imagen);
+              $("#uno").attr("src",resultado[0].imagen);
+            },
+            error: function (malo) {
+                 alert(' fallo gachamente');
+              }
+           });
         
                 $('.map_canvas').gmap().bind('init', function(ev, map) {
                
