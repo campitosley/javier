@@ -11,8 +11,8 @@
 }
 
 body {
-  padding-bottom: 40px;
-  
+    padding-bottom: 40px;
+
 }
 
 #e{
@@ -24,24 +24,24 @@ body {
 .publicidad-encabezado{
     width:589px;
     height:120px;
-        color: #080808;
-        background: rgba(255,255,255,0.7);
-        /*
-      -ms-background:white;
-       background-image: -webkit-gradient(
-  linear, left top, right bottom, from(rgba(255,255,255,1.0)),
-  to(rgba(255,255,255,0.5)), color-stop(.5,#FFFFFF)
+    color: #080808;
+    background: rgba(255,255,255,0.7);
+    /*
+  -ms-background:white;
+   background-image: -webkit-gradient(
+linear, left top, right bottom, from(rgba(255,255,255,1.0)),
+to(rgba(255,255,255,0.5)), color-stop(.5,#FFFFFF)
 );
 /* mozilla example - FF3.6+ 
-        background-image: -moz-linear-gradient(
-          left center,
-      rgba(255, 255, 255, 1.0) 20%,   rgba(255, 255, 255, 0) 95% 
-        );
+    background-image: -moz-linear-gradient(
+      left center,
+  rgba(255, 255, 255, 1.0) 20%,   rgba(255, 255, 255, 0) 95% 
+    );
 
-*/
-border-color: #c0c0c0;
-border-style: solid;
-border-width: thin;
+    */
+    border-color: #c0c0c0;
+    border-style: solid;
+    border-width: thin;
 
 }
 #esquina{
@@ -54,11 +54,11 @@ border-width: thin;
     float:right;
 }
 .imagenes-publicidad{
-float:left; 
-width:572px;
-position: relative;
-margin-top:-120px;
-z-index: -99;
+    float:left; 
+    width:572px;
+    position: relative;
+    margin-top:-120px;
+    z-index: -99;
 
 }
 .numero-uno{
@@ -97,7 +97,7 @@ z-index: -99;
     width:400px;
     position: relative;
     height:100px;
-  //  background: #3c763d;
+    //  background: #3c763d;
     margin:0 auto;
     margin-top:-300px;
 }
@@ -107,21 +107,21 @@ z-index: -99;
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 .navbar-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
 }
 
 /* Flip around the padding for proper display in narrow viewports */
 .navbar-wrapper .container {
-  padding-left: 0;
-  padding-right: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 .navbar-wrapper .navbar {
-  padding-left: 15px;
-  padding-right: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 
@@ -130,25 +130,25 @@ z-index: -99;
 
 /* Carousel base class */
 .carousel {
-  height: 600px;
-  margin-bottom: 60px;
+    height: 600px;
+    margin-bottom: 60px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  z-index: 10;
+    z-index: 10;
 }
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 600px;
-  background-color: #777;
+    height: 600px;
+    background-color: #777;
 }
 .carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 600px;
 }
 
 
@@ -158,21 +158,21 @@ z-index: -99;
 
 /* Pad the edges of the mobile views a bit */
 .marketing {
-  padding-left: 15px;
-  padding-right: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
-  text-align: center;
-  margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 .marketing h2 {
-  font-weight: normal;
+    font-weight: normal;
 }
 .marketing .col-lg-4 p {
-  margin-left: 10px;
-  margin-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 
@@ -180,14 +180,14 @@ z-index: -99;
 ------------------------- */
 
 .featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    margin: 80px 0; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
 .featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
 }
 
 /*  Columans catalogos */
@@ -196,23 +196,23 @@ z-index: -99;
 }
 .columna-izquierda h3{
     font-size: 16px;
-     font-weight:  bold;
-     color:  #38843a;
+    font-weight:  bold;
+    color:  #38843a;
 }
 .columna-izquierda img{
     width: 100%;
-     height:100%;
+    height:100%;
     max-width: 620px;
-   
+
 }
 h4{
-     color: #376699;
-     font-size: 16px;
-     font-weight: bolder;
+    color: #376699;
+    font-size: 16px;
+    font-weight: bolder;
 }
 
 .columna-derecha{
-  
+
 }
 .margenes{
     border: #c0c0c0 thin solid;
@@ -235,12 +235,12 @@ h4{
     height: 280px;
     background: #38843a;
     margin:  0 auto;
-     border:#c0c0c0 solid thin;
+    border:#c0c0c0 solid thin;
 }
 .ubiacion-exacta{
-     margin-top: -100px;
-     position: relative;
-     z-index:90;
+    margin-top: -100px;
+    position: relative;
+    z-index:90;
 }
 
 /* RESPONSIVE CSS
@@ -248,50 +248,50 @@ h4{
 
 @media (min-width: 768px) {
 
-  /* Remove the edge padding needed for mobile */
-  .marketing {
-    padding-left: 0;
-    padding-right: 0;
-  }
+    /* Remove the edge padding needed for mobile */
+    .marketing {
+        padding-left: 0;
+        padding-right: 0;
+    }
 
-  /* Navbar positioning foo */
-  .navbar-wrapper {
-    margin-top: 20px;
-  }
-  .navbar-wrapper .container {
-    padding-left:  15px;
-    padding-right: 15px;
-  }
-  .navbar-wrapper .navbar {
-    padding-left:  0;
-    padding-right: 0;
-  }
+    /* Navbar positioning foo */
+    .navbar-wrapper {
+        margin-top: 20px;
+    }
+    .navbar-wrapper .container {
+        padding-left:  15px;
+        padding-right: 15px;
+    }
+    .navbar-wrapper .navbar {
+        padding-left:  0;
+        padding-right: 0;
+    }
 
 
-  /* The navbar becomes detached from the top, so we round the corners */
-  .navbar-wrapper .navbar {
-    border-radius: 4px;
-  }
+    /* The navbar becomes detached from the top, so we round the corners */
+    .navbar-wrapper .navbar {
+        border-radius: 4px;
+    }
 
-  /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 20px;
-    font-size: 21px;
-    line-height: 1.4;
-  }
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+        margin-bottom: 20px;
+        font-size: 21px;
+        line-height: 1.4;
+    }
 
-  .featurette-heading {
-    font-size: 50px;
-  }
+    .featurette-heading {
+        font-size: 50px;
+    }
 
 }
 
 @media (min-width: 992px) {
-  .featurette-heading {
-    margin-top: 120px;
-  }
-  
-  
+    .featurette-heading {
+        margin-top: 120px;
+    }
+
+
 }
 /******************************************************************************************************
 INICIAL RESPONSIVO CELULARES
@@ -299,80 +299,80 @@ INICIAL RESPONSIVO CELULARES
 */
 @media(max-width:500px){
     .carousel {
-  height: 300px;
-  margin-bottom: 60px;
-}
+        height: 300px;
+        margin-bottom: 60px;
+    }
 
-.map_canvas{
-    width:300px;
-    height: 280px;
-    background: #38843a;
-    margin:  0 auto;
-    border:#38843a solid thin;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 10;
-}
+    .map_canvas{
+        width:300px;
+        height: 280px;
+        background: #38843a;
+        margin:  0 auto;
+        border:#38843a solid thin;
+    }
+    /* Since positioning the image, we need to help out the caption */
+    .carousel-caption {
+        z-index: 10;
+    }
 
-/* Declare heights because of positioning of img element */
-.carousel .item {
-  height: 300px;
-  background-color: #777;
-  
-}
-.carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 300px;
-}
+    /* Declare heights because of positioning of img element */
+    .carousel .item {
+        height: 300px;
+        background-color: #777;
 
-#esquina{
-    display: none;
-}
-.publicidad{
-    width:320px;
-    margin: 0 auto;
-}
+    }
+    .carousel-inner > .item > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        height: 300px;
+    }
 
-.publicidad-encabezado{
-  display:none;
+    #esquina{
+        display: none;
+    }
+    .publicidad{
+        width:320px;
+        margin: 0 auto;
+    }
 
-}
-.imagenes-publicidad{
-    margin-top: 20px;
-    width:320px;
-     margin: 0 auto;
+    .publicidad-encabezado{
+        display:none;
 
-
-}
-#esquina-derecha{
-    display: none;
-   }
-   
- .fb-comments, .fb-comments * {
-    width:100% !important;
-   
-
-  
-}
-
-#facebook-desktop{
-    display:none;
-}
-#facebook-movil{
-    display:block;
-}
+    }
+    .imagenes-publicidad{
+        margin-top: 20px;
+        width:320px;
+        margin: 0 auto;
 
 
-.contenedores{
-    margin-top: -160px;
-}
+    }
+    #esquina-derecha{
+        display: none;
+    }
+
+    .fb-comments, .fb-comments * {
+        width:100% !important;
 
 
- 
+
+    }
+
+    #facebook-desktop{
+        display:none;
+    }
+    #facebook-movil{
+        display:block;
+    }
+
+
+    .contenedores{
+        margin-top: -160px;
+    }
+
+
+
 
 }
 /* TERMINA RESPONSIVO PARA TELEFONO     */
@@ -394,18 +394,18 @@ INICIAL RESPONSIVO CELULARES
 
 #mi-promo1-mensaje{
     text-align: center;
-    
+
 }
 
 #mi-promo1-mensaje p{
     text-align: center;
-    
+
 }
 
 
 #m-1{
-     background: red;
-     width:10px;
-     height:10px;
+    background: red;
+    width:10px;
+    height:10px;
 }
 
