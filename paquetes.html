@@ -6,29 +6,36 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Kuicho Promociones</title>
+        <title>Paquetes</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="estilos.css" />
-        <link rel="stylesheet" href="imagenes-javier/estilos-kuicho.css">
+       <link rel="stylesheet" href="imagenes-javier/estilos-kuicho.css"> 
+       <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/ui-lightness/jquery-ui.css" />
+	
+	
+		<script type="text/javascript" src="js/modernizr-2.0.6/modernizr.min.js"></script>
     </head>
     <body>
                 <!--facebook -->
+<div id="fb-root"></div>
+<div id="fb-root"></div>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=697710973584460";
+  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=1475259909356554";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="container">
     
-    <center> <div class="fb-like" data-mobile=true data-href="http://kuicho.com/paquetes.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" style="margin:0 auto;margin-top:5px;text-align:center;"></div></center>
+    <center> <div class="fb-like" data-href="http://kuicho.com/restaurantes.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" style="margin:0 auto;margin-top:5px;text-align:center;"></div></center>
 
 </div>      
-        <h1> Promoción de la semana</h1>
+        <h1> Kuicho Paquetes especiales</h1>
        <!-- Compatir facdbook -->
 
 <!-- Navegacion-->
@@ -54,18 +61,21 @@ and open the template in the editor.
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Servicios <b class="caret"></b></a>
                   <ul class="dropdown-menu">
                       <li><a id="temascales" href="hoteles.html"><span class="glyphicon glyphicon-briefcase"></span>   Hoteles</a></li>
-                    <li><a id="restaurantes" href="restaurantes.html"><span class="glyphicon glyphicon-cutlery"></span>    Restaurantes</a></li>
-                    <li><a id="artesanias" href="#"><span class="glyphicon glyphicon-gift"></span>   Tiendas de artesanías</a></li>
+                      <li><a id="restaurantes" href="restaurantes.html"><span class="glyphicon glyphicon-cutlery"></span>    Restaurantes</a></li>
+                      <li><a id="artesanias" href="artesanias.html"><span class="glyphicon glyphicon-gift"></span>   Tiendas de artesanías</a></li>
+                    <li><a id="lugares" href="lugares.html"><span class="glyphicon glyphicon-gift"></span>   Lugares de interés</a></li>
+                    <li><a id="fiestas" href="fiestas.html"><span class="glyphicon glyphicon-leaf"></span>  Fiestas y tradiciones</a></li>
+                    <li><a id="otros" href="hoteles.html"><span class="glyphicon glyphicon-gift"></span>   Otros servicios</a></li>
                     <li><a id="hoteles" href="temazcales.html"><span class="glyphicon glyphicon-leaf"></span>  Temazcales</a></li>
                     <li class="divider"></li>
                     <li><a  id="medicos"  href="#"><span class="glyphicon glyphicon-plus-sign"></span>    Médicos</a></li>
                     <li><a  id="policias" href="#"><span class="glyphicon glyphicon-phone"></span>    Policía</a></li>
                   </ul>
                 </li>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="paquetes.html">Paquetes</a></li>
-                <li class="active"><a href="promociones.html">Promociones</a></li>
-                
+                <li><a href="/">Inicio</a></li>
+                <li class="active"><a href="paquetes.html">Paquetes</a></li>
+                <li><a href="promociones.html">Promociones</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
               </ul>
             </div>
           </div>
@@ -86,7 +96,7 @@ and open the template in the editor.
             <div class="numero-uno">
                 1
             </div>
-            <h2 id="mi-promo1-mensaje"></h2>
+           <div id="mi-promo1-mensaje"></div>
         </div>
          
         <img id="esquina" src="esquina-inferior.png">
@@ -94,24 +104,70 @@ and open the template in the editor.
         <img id="esquina-derecha"  src="esquina-inferior-derecha.png">
           
         </div>
+<!--
+
+*************************************************************************************************************************************
+INICIA CATALOGO A DOS COLUMNAS
+
+**************************************************************************************************************************************
+-->
+
+<div class="container">
+ <center>
+                <h2>Dudas comentarios</h2>
+                <p>¿Tienes alguna duda o comentario de ésta promoción?. ¡Preguntanos!</p>
+                <center>  <div align="center" class="fb-comments" id="facebook-desktop" data-width="550"   data-href="http://kuicho.com/hoteles.html" data-numposts="5" data-colorscheme="light"></div>   </center>
+                <div class="fb-comments" id="facebook-movil" data-width="320" data-href="http://kuicho.com/hoteles.html" data-numposts="5" data-colorscheme="light"></div></center>
+</div>
+    <div id="total">
       
+        <div class="container-fluid " hidden="">
+        <center>  <h1>Catálogo de hoteles</h1></center>
+        <div class="row">
+            <div class="col-md-6 columna-izquierda margenes">
+                <h2 id="titulo-hotel">Titulo del hotel</h2>
+                <center> <img class="margenes" id="uno" src="imagenes-javier/catalogo-hotel1.jpg"></center>
+                <h3>30% de descuento si reservas en las próximas 24 horas</h3>
+                <p>Checa nuestros precios o llamanos al Tel. 66 55 44 55</p>
+                <a class="btn btn-success">Checar prcios</a>
+            </div>
+            <div class="col-md-6 columna-izquierda">
+                <h2>Nuestra ubicación</h2>
+                <center><h4>Hotel Casino Royal</h4></center>
+                    <div  class="map_canvas">
+                
+                    </div>
+                <center> <a href="" class="btn btn-lg btn-success ubiacion-exacta" >Ver hubicacion exacta</a></center>
+                <p>Nuestro servicio es de primer nivel, contamos con jacuzzi en la mayoria
+                de las habitaciones, servicio de lavandería, spa y guardería las 24
+                 horas del día</p>
+                    
+            </div>
+        </div>
         
+    </div>
+       
+    </div>    <!-- termina total  -->   
  
    
 
      
 
-    
-        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> 
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="bootstrap/js/docs.min.js"></script>
     <script src="js/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="ui/jquery.ui.map.js"></script>
+		<script type="text/javascript" src="ui/jquery.ui.map.services.js"></script>
+		<script type="text/javascript" src="ui/jquery.ui.map.extensions.js"></script>
+		
     <script>
     $(document).ready(function(){
         $("#hoteles").click(function(){
         $.scrollTo($("#informacion-hoteles"),800);
         });
-        
+        //primer ajax para que se cargue la promocion del encabezado
         $.ajax({
             type:'get',
             dataType:'jsonp',
@@ -123,14 +179,72 @@ and open the template in the editor.
             success:function(response){
                // alert(response[1].mensaje);
                /* Aqui iran todos los valores para cada promo*/
-               $("#mi-promo1-mensaje").html("<h2>"+response[3].mensaje+"</h2>\n\
-                <p>Nos encontramos en "+response[3].direccion+"</p>");
-            },
+               $("#mi-promo1-mensaje").html("<center><h2>"+response[2].mensaje+"</h2></center><center><br><br><br> <p>"+response[2].direccion+"</p></center>");
+               $("#titulo-hotel").html(response[0].mensaje);
+         
+    },
             error:function(){
                 alert("POST fallo");
             }
              
         });
+        
+        //SEGUNDO AJAX PARA QUE SE CARGUEN TODOS LOS CATALOGOS
+        $.ajax({
+            dataType:'json',
+            type:'get',
+            url:'generar-promociones.php',
+            data:{
+              catalogo:'promo8'
+            },
+            contentType:'application/json',
+            success:function(resultado){
+               // alert(resultado[0].mensaje);
+               //alert("Numero de elementos:"+resultado.length);
+              // alert("hasta aqui todo bien, tamanio:"+resultado[0].mensaje);
+              //$("#resultado").html(resultado[0].imagen);
+              $("#uno").attr("src",resultado[0].imagen);
+              //alert("cargados:"+resultado.length);
+              var numero=1;
+              //resultados[0]=la imagen; resultados[1]=
+                   for(i=0;i<resultado.length;i++){
+                       numero=numero+i;
+                        var pos=''+resultado[i].posicion;
+              var mapita="mapita"+i;
+           
+             
+                      $("#total").append('<div class="container-fluid "> <div class="row"> <div class="col-md-6 columna-izquierda margenes">   <h2 id="titulo-hotel">'+resultado[i].mensaje+'</h2><center> <img class="margenes" id="uno" src="'+resultado[i].imagen+'"></center><h3>'+resultado[i].precios+'</h3><p>'+resultado[i].direccion+'</p><a class="btn btn-success">Checar precios</a></div><div class="col-md-6 columna-izquierda"><h2>Nuestra ubicación</h2><center><h4>Teléfono: '+resultado[i].telefono+'</h4></center><div class="map_canvas '+mapita+'"></div><center><p>'+resultado[i].mensaje+'</p><br><p>'+resultado[i].direccion+'</p></center></div></div></div> ');
+                $('.'+mapita).gmap({ 'center': pos });
+    
+               
+                  //   $('.'+mapita).gmap('addMarker', { /*id:'m_1',*/ 'position': pos, 'bounds': true } );  
+                      $('.'+mapita).gmap('option', 'zoom', 13);
+
+             /*   
+         
+            $(".mapita").gmap().bind('init', function(ev, map) {
+            
+	        $(".mapita").gmap('addMarker', {'position': pos, 'bounds': true}).click(function() {
+		//$('.map_canvas').gmap('openInfoWindow', {'content': 'Hotel Asturias'}, this);
+               
+                
+	        });
+              $(".mapita").gmap('option', 'zoom', 10);
+    
+            });*/
+      
+        
+        }//TERMINA CICLO FORCITO DEL CARGADO DE TODAS LAS PROMOCIONES
+            },
+            error: function (malo) {
+                 alert(' fallo gachamente');
+              }
+           });
+           
+         
+                
+            
+         
      
     });
     </script>

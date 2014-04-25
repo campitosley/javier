@@ -6,15 +6,39 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Administracion</title>
-        <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <title>MAPAS</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta http-equiv="content-language" content="en" />
+		<meta name="author" content="Johan Säll Larsson" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+     
+		
+		
+		<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/ui-lightness/jquery-ui.css" />
+		<link type="text/css" rel="stylesheet" href="css/960/min/960.css" />
+		<link type="text/css" rel="stylesheet" href="css/960/min/960_16_col.css" />
+		<link type="text/css" rel="stylesheet" href="css/normalize/min/normalize.css" />
+		<link type="text/css" rel="stylesheet" href="css/prettify/min/prettify.css" />
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/modernizr-2.0.6/modernizr.min.js"></script>
+                 <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     </head>
     <body>
-    <center> <h2>Administración (en Construcción)</h2>
-        <p>Selecciona una categoría por ejemplo, hotel, marca un mensaje , este seria el encabezado a mostrarse, posteriormente 
-        ingresa la direccion del lugar y en los recuadros de abajo, selecciona el correspondiente, por ejemplo si seleccionaste hotel
+        <header class="dark">
+			<div class="container_16">
+                            <h1><a href="/">Kuicho <span></span></a> Administración de promociones</h1>
+			</div>
+		</header>
+        <ol class="breadcrumb">
+            <li><a href="/">INICIO</a></li>
+            <li><a href="administracion-promociones.html">ADMINISTRACIÓN DE PROMOCIONES</a></li>
+            <li><a href="administracion-catalogos.html">ADMINISTRACIÓN DE CATALOGOS</a></li>
+            <li><a href="borrar-catalogos.php" class="active">BORRAR CATALOGOS</a></li>
+        </ol>
+    <center> <h2>Administración</h2>
+        <p>Esta sección  es para agregar las imagenes y mensajes que aparecen al inicio de cada pagina de servicio, por ejemplo, hoteles, restaurantes, etc.Selecciona una categoría por ejemplo, hotel, marca un mensaje , este seria el encabezado a mostrarse, posteriormente 
+        ingresa el título a mostrarse del lugar, después la información de la promoción,  y en los recuadros de abajo, selecciona el correspondiente, por ejemplo si seleccionaste hotel
         selecciona el tercer recuadro, y carga una fotografia, una vez hecho esto navega al link correspondiente y estará actualizado</p></center>
         <div class="container">
         <div class="col-md-4">
@@ -32,7 +56,7 @@ and open the template in the editor.
         </div>
         <div class="col-md-4">
             <div class="row">
-                <H2>Mensaje</H2>
+                <H2>Titulo</H2>
             </div>
             <div class="row">
                 <textarea id="mensaje" rows="4" cols="30">
@@ -41,22 +65,30 @@ and open the template in the editor.
         </div>
          <div class="col-md-4">
             <div class="row">
-                <H2>Direccion</H2>
+                <H2>Información de promoción</H2>
             </div>
              <div class="row">
                <textarea id="direccion" rows="4" cols="30">
                 </textarea>
             </div>
              <div class="row">
-                 <input id="boton-promocion1" type="button" value="guardar pormocion 1" class="btn btn-success">
+                 <input id="boton-promocion1" type="button" value="guardar promocion" class="btn btn-success">
              </div>
         </div>
         </div>
     <center> <iframe width="900" height="1200" src="http://campitos-ley.whelastic.net/archivo"  frameBorder="0"  ></iframe></center>
-        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="bootstrap/js/docs.min.js"></script>
-    <script src="js/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+       <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> 
+		<script type="text/javascript" src="js/jquery-1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/underscore-1.2.2/underscore.min.js"></script>
+		<script type="text/javascript" src="js/backbone-0.5.3/backbone.min.js"></script>
+		<script type="text/javascript" src="js/prettify/prettify.min.js"></script>
+                <script src="bootstrap/js/bootstrap.min.js"></script>
+                <script src="bootstrap/js/docs.min.js"></script>
+		<script type="text/javascript" src="js/demo.js"></script>
+		<script type="text/javascript" src="ui/jquery.ui.map.js"></script>
+		<script type="text/javascript" src="ui/jquery.ui.map.services.js"></script>
+		<script type="text/javascript" src="ui/jquery.ui.map.extensions.js"></script>
     <script>
      /*
       * NOTA: ESTE PORYECTO USA JSONP CON SPRING EN EL PROYECTO SPRING campitos, dentro del controlador ControladorGuardarImagen

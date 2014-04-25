@@ -34,7 +34,7 @@ if (mysqli_connect_errno())
    //   mysqli_query($con,"INSERT INTO informacion (promocion,mensaje, direccion,imagen)
 //VALUES ('esto es una promo no 2', 'Ven a hospedarte al mejor hotel de la region','domiciolio conocido','algo.jpg')");
 // echo 'Se hizo la insercion'.'<br>';
- 
+ /*
  $result = mysqli_query($con,"SELECT * FROM informacion");
 
 while($row = mysqli_fetch_array($result))
@@ -42,7 +42,7 @@ while($row = mysqli_fetch_array($result))
   echo 'promocion:'. $row['promocion'] . " mensaje: " . $row['mensaje'];
   echo "<br>";
   }
-  
+  */
   
   $result2 = mysqli_query($con,"SELECT * FROM informacion");
   echo "<table border='1'>

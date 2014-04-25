@@ -26,14 +26,11 @@
 			</div>
 		</header>
         <br>
-        <div class="container">
-            
-            <center>  <a href="administracion-catalogos.html"  class="btn btn-lg btn-success" style="color: #ffffff;" >Regresar a administración</a></center>
-        </div>
+        
 
 
         <br><br>
-
+    <center>
 <?php
 
 /* 
@@ -47,6 +44,8 @@ $promo=$_POST["promo"];
 $posicion=  $_POST["posicion"];
 $titulo=$_POST["direccion"];
 $mensaje=$_POST["mensaje"];
+$telefono=$_POST["telefono"];
+$precios=$_POST["precios"];
 
 
 // La sig ruta solo es para guardar en json
@@ -70,6 +69,22 @@ if($promo=="promo3"){
 if($promo=="promo4"){
     $uploaddir = '/home/campitoskuicho/public_html/archivos-temascales/';
       $ruta="http://kuicho.com/archivos-temascales/";
+}
+if($promo=="promo5"){
+    $uploaddir = '/home/campitoskuicho/public_html/archivos-lugares/';
+      $ruta="http://kuicho.com/archivos-lugares/";
+}
+if($promo=="promo6"){
+    $uploaddir = '/home/campitoskuicho/public_html/archivos-fiestas/';
+      $ruta="http://kuicho.com/archivos-fiestas/";
+}
+if($promo=="promo7"){
+    $uploaddir = '/home/campitoskuicho/public_html/archivos-fiestas/';
+      $ruta="http://kuicho.com/archivos-promociones/";
+}
+if($promo=="promo8"){
+    $uploaddir = '/home/campitoskuicho/public_html/archivos-fiestas/';
+      $ruta="http://kuicho.com/archivos-paquetes/";
 }
 
 
@@ -103,8 +118,8 @@ if (mysqli_connect_errno())
   else{
       echo'te conectaste adecuadamente'.'<br>';
      //Insertamoe n la tabla informacion:
-     mysqli_query($con,"INSERT INTO informacion (promocion,mensaje, direccion,imagen,posicion)"
-             ." VALUES ('$promo', '$mensaje','$titulo','$ruta','$posicion')");
+     mysqli_query($con,"INSERT INTO informacion (promocion,mensaje, direccion,imagen,posicion,telefono,precios)"
+             ." VALUES ('$promo', '$mensaje','$titulo','$ruta','$posicion','$telefono','$precios')");
   }
 echo 'registro insertado correctamente'.'<br>';
 // echo 'Se hizo la insercion'.'<br>';
@@ -114,6 +129,12 @@ $fecha=date("F j, Y, g:i a");
 
 echo "El archivo a subir es:".$archivaldo." y la latitud longitud es:".$posicion." Seleccionaste un:".$promo. " la fecha es:".$fecha;
 ?>
+    </center>
+    <br>
+    <div class="container">
+            
+            <center>  <a href="administracion-catalogos.html"  class="btn btn-lg btn-success" style="color: #ffffff;" >Regresar a administración</a></center>
+        </div>
  <script type="text/javascript" src="js/jquery-1.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="js/underscore-1.2.2/underscore.min.js"></script>

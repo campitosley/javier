@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/docs.min.js"></script>
+    <script src="js/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script>
+     /*
+      * NOTA: ESTE PORYECTO USA JSONP CON SPRING EN EL PROYECTO SPRING campitos, dentro del controlador ControladorGuardarImagen
+      */   
+    
+    
+    $(document).ready(function(){
+           $.ajax({
+    //jsonp:'callback',
+    dataType: "jsonp",
+    type:'get',
+    url: "http://localhost:8080/campitos/servicio-imagenes/jsonp?callback=?",
+    //jsonpCallback: 'getCoffeeAdvice',
+    contentType: "application/json",
+    success: function (response, textStatus, jqXHR) {
+        alert(response.promo1);
+      //  var data = JSON.parse(responseData['AuthenticateUserResult']);
+      //  console.log(data);
+    },
+    error: function (responseData) {
+        alert('POST fallo gachamente');
+    }
+});
+        });
+    </script>
+    </body>
+</html>

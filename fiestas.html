@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Conoce nuestra recomendacion de Restaurantes para el dia de hoy!!!</title>
+        <title>Fiestas y tradiciones!!!</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -35,7 +35,7 @@ and open the template in the editor.
     <center> <div class="fb-like" data-href="http://kuicho.com/restaurantes.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" style="margin:0 auto;margin-top:5px;text-align:center;"></div></center>
 
 </div>      
-        <h1> Kuicho Restaurantes</h1>
+<h1>Fiestas y tradiciones</h1>
        <!-- Compatir facdbook -->
 
 <!-- Navegacion-->
@@ -74,7 +74,7 @@ and open the template in the editor.
                 </li>
                 <li><a href="/">Inicio</a></li>
                 <li><a href="paquetes.html">Paquetes</a></li>
-                <li><a href="promociones.html">Promociones</a></li>
+                <li class="active"><a href="promociones.html">Promociones</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
               </ul>
             </div>
@@ -96,11 +96,11 @@ and open the template in the editor.
             <div class="numero-uno">
                 1
             </div>
-           <div id="mi-promo1-mensaje"></div>
+            <div id="mi-promo1-mensa"><h2>Fiestas y tradiciones</h2></div>
         </div>
          
         <img id="esquina" src="esquina-inferior.png">
-        <img class="imagenes-publicidad" src="http://campitos-ley.whelastic.net/servicio-imagenes/leer-imagen-monguito/promo2"/>
+        <img class="imagenes-publicidad" src="imagenes-javier/chinelo-templo.jpg"/>
         <img id="esquina-derecha"  src="esquina-inferior-derecha.png">
           
         </div>
@@ -179,8 +179,8 @@ INICIA CATALOGO A DOS COLUMNAS
             success:function(response){
                // alert(response[1].mensaje);
                /* Aqui iran todos los valores para cada promo*/
-               $("#mi-promo1-mensaje").html("<center><h2>"+response[1].mensaje+"</h2></center><center><br><br><br> <p>"+response[1].direccion+"</p></center>");
-               $("#titulo-hotel").html(response[1].mensaje);
+               $("#mi-promo1-mensaje").html("<center><h2>"+response[0].mensaje+"</h2></center><center><br><br><br> <p>"+response[0].direccion+"</p></center>");
+               $("#titulo-hotel").html(response[0].mensaje);
          
     },
             error:function(){
@@ -195,7 +195,7 @@ INICIA CATALOGO A DOS COLUMNAS
             type:'get',
             url:'generar-promociones.php',
             data:{
-              catalogo:'promo2'
+              catalogo:'promo6'
             },
             contentType:'application/json',
             success:function(resultado){
@@ -213,7 +213,7 @@ INICIA CATALOGO A DOS COLUMNAS
               var mapita="mapita"+i;
            
              
-                      $("#total").append('<div class="container-fluid "> <div class="row"> <div class="col-md-6 columna-izquierda margenes">   <h2 id="titulo-hotel">'+resultado[i].mensaje+'</h2><center> <img class="margenes" id="uno" src="'+resultado[i].imagen+'"></center><h3>'+resultado[i].precios+'</h3><p>'+resultado[i].direccion+'</p><a class="btn btn-success">Checar precios</a></div><div class="col-md-6 columna-izquierda"><h2>Nuestra ubicación</h2><center><h4>Teléfono: '+resultado[i].telefono+'</h4></center><div class="map_canvas '+mapita+'"></div><center><p>'+resultado[i].mensaje+'</p><br><p>'+resultado[i].direccion+'</p></center></div></div></div> ');
+                      $("#total").append('<div class="container-fluid "> <div class="row"> <div class="col-md-6 columna-izquierda margenes">   <h2 id="titulo-hotel"></h2><center> <img class="margenes" id="uno" src="'+resultado[i].imagen+'"></center><h3>'+resultado[i].precios+'</h3><p>'+resultado[i].direccion+'</p></div><div class="col-md-6 columna-izquierda"><h2>Fiestas y tradiciones</h2><center><h4>'+resultado[i].telefono+'</h4></center><div class="map_canvas '+mapita+'"></div><center><p>'+resultado[i].mensaje+'</p><br><p>'+resultado[i].direccion+'</p></center></div></div></div> ');
                 $('.'+mapita).gmap({ 'center': pos });
     
                

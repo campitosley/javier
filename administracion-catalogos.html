@@ -1,7 +1,7 @@
 <!doctype html> 
 <html lang="en">
    <head>
-		<title>MAPAS</title>
+		<title>Administración de catalogos</title>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta http-equiv="content-language" content="en" />
@@ -25,6 +25,12 @@
                             <h1><a href="/">Kuicho <span></span></a> Alta de catálogos y mapa de geolocalización</h1>
 			</div>
 		</header>
+        <ol class="breadcrumb">
+            <li><a href="/">INICIO</a></li>
+            <li><a href="administracion-promociones.html">ADMINISTRACIÓN DE PROMOCIONES</a></li>
+            <li><a href="administracion-catalogos.html">ADMINISTRACIÓN DE CATALOGOS</a></li>
+            <li><a href="borrar-catalogos.php" class="active">BORRAR CATALOGOS</a></li>
+        </ol>
         <form  name="formita" id="formita" action="administracion-catalogos.php" enctype="multipart/form-data" method="post" accept-charset="utf-8">
         <div class="container">
         <h2>Instrucciones</h2>
@@ -41,12 +47,16 @@
                     <option value="promo2">Restaurantes</option>
                     <option value="promo3">Artesanias</option>
                     <option value="promo4">Temazcales</option>
+                    <option value="promo5">lugares a visitar</option>
+                    <option value="promo6">Fiestas</option>
+                    <option value="promo7">Promociones</option>
+                    <option value="promo8">Paquetes</option>
                 </select>
             </div>
         </div>
         <div class="col-md-4">
             <div class="row">
-                <H2>Mensaje</H2>
+                <H2>Título</H2>
             </div>
             <div class="row">
                 <textarea id="mensaje" name="mensaje" rows="4" cols="30">
@@ -63,6 +73,7 @@
             </div>
              
         </div>
+                    <div class="col-md-4">
             <div class="row">
   <!-- <form enctype="multipart/form-data" action="subir_hoteles.php" method="POST">-->
   <!--   MAX_FILE_SIZE must precede the file input field -->
@@ -72,7 +83,22 @@
 
 <!--</form>-->
             </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                             <h3> Telefono:</h3>
+                             <input type="text" name="telefono" placeholder="telefono(s)" size="30">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                             <h3> Precios u ofertas:</h3>
+                             <textarea id="precio" name="precios"  rows="4" cols="30">
+                </textarea>
+                        </div>
+                    </div>
         </div>
+            <br>
         
         
 		<div class="container_16">
@@ -164,7 +190,9 @@
                                             
 						$(map).click( function(event) {
 							self.addMarker({'position': event.latLng, 'draggable': true, 'bounds': false}, function(map, marker) {
-								$('#dialog').append('<form id="dialog'+marker.__gm_id+'" method="get" action="/" style="display:none;"><p><label for="country">Pais</label><input id="country'+marker.__gm_id+'" class="txt" name="country" value=""/></p><p><label for="state">Estado</label><input id="state'+marker.__gm_id+'" class="txt" name="state" value=""/></p><p><label for="address">Direccion</label><input id="address'+marker.__gm_id+'" class="txt" name="address" value=""/></p><p><label for="comment">Commentario</label><textarea id="comment" class="txt" name="comment" cols="40" rows="5"></textarea></p></form>');
+								$('#dialog').append('<form id="dialog'+marker.__gm_id+'" method="get" action="/" style="display:none;"><p><label for="country">Pais</label><input id="country'+marker.__gm_id+'" class="txt" name="country" value=""/></p><p><label for="state">Estado</label><input id="state'+marker.__gm_id+'" class="txt" name="state" value=""/></p><p><label for="address">Direccion</label>\n\
+                                                        <input id="address'+marker.__gm_id+'" class="txt" name="address" value=""/></p><p><label for="comment">Commentario</label><textarea id="comment" class="txt" name="comment" cols="40" rows="5">\n\
+                                                        </textarea></p></form>');
 								self.get('findLocation')(marker.getPosition(), marker);
                                                             valorcin= event.latLng;
                                                   

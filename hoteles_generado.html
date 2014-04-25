@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Conoce nuestra recomendacion de Restaurantes para el dia de hoy!!!</title>
+        <title>Conoce nuestra recomendacion de hoteles para el dia de hoy!!!</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -35,7 +35,7 @@ and open the template in the editor.
     <center> <div class="fb-like" data-href="http://kuicho.com/restaurantes.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" style="margin:0 auto;margin-top:5px;text-align:center;"></div></center>
 
 </div>      
-        <h1> Kuicho Restaurantes</h1>
+        <h1> Kuicho Hoteles</h1>
        <!-- Compatir facdbook -->
 
 <!-- Navegacion-->
@@ -63,19 +63,16 @@ and open the template in the editor.
                       <li><a id="temascales" href="hoteles_respaldo.html"><span class="glyphicon glyphicon-briefcase"></span>   Hoteles</a></li>
                       <li><a id="restaurantes" href="restaurantes.html"><span class="glyphicon glyphicon-cutlery"></span>    Restaurantes</a></li>
                     <li><a id="artesanias" href="#"><span class="glyphicon glyphicon-gift"></span>   Tiendas de artesanías</a></li>
-                    <li><a id="lugares" href="lugares.html"><span class="glyphicon glyphicon-gift"></span>   Lugares de interés</a></li>
-                    <li><a id="fiestas" href="fiestas.html"><span class="glyphicon glyphicon-leaf"></span>  Fiestas y tradiciones</a></li>
-                    <li><a id="otros" href="hoteles.html"><span class="glyphicon glyphicon-gift"></span>   Otros servicios</a></li>
                     <li><a id="hoteles" href="temazcales.html"><span class="glyphicon glyphicon-leaf"></span>  Temazcales</a></li>
                     <li class="divider"></li>
                     <li><a  id="medicos"  href="#"><span class="glyphicon glyphicon-plus-sign"></span>    Médicos</a></li>
                     <li><a  id="policias" href="#"><span class="glyphicon glyphicon-phone"></span>    Policía</a></li>
                   </ul>
                 </li>
-                <li><a href="/">Inicio</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="paquetes.html">Paquetes</a></li>
-                <li><a href="promociones.html">Promociones</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li class="active"><a href="promociones.html">Promociones</a></li>
+                
               </ul>
             </div>
           </div>
@@ -100,7 +97,7 @@ and open the template in the editor.
         </div>
          
         <img id="esquina" src="esquina-inferior.png">
-        <img class="imagenes-publicidad" src="http://campitos-ley.whelastic.net/servicio-imagenes/leer-imagen-monguito/promo2"/>
+        <img class="imagenes-publicidad" src="http://campitos-ley.whelastic.net/servicio-imagenes/leer-imagen-monguito/promo3"/>
         <img id="esquina-derecha"  src="esquina-inferior-derecha.png">
           
         </div>
@@ -179,8 +176,8 @@ INICIA CATALOGO A DOS COLUMNAS
             success:function(response){
                // alert(response[1].mensaje);
                /* Aqui iran todos los valores para cada promo*/
-               $("#mi-promo1-mensaje").html("<center><h2>"+response[1].mensaje+"</h2></center><center><br><br><br> <p>"+response[1].direccion+"</p></center>");
-               $("#titulo-hotel").html(response[1].mensaje);
+               $("#mi-promo1-mensaje").html("<center><h2>"+response[2].mensaje+"</h2></center><center><br><br><br> <p>"+response[2].direccion+"</p></center>");
+               $("#titulo-hotel").html(response[2].mensaje);
          
     },
             error:function(){
@@ -195,7 +192,7 @@ INICIA CATALOGO A DOS COLUMNAS
             type:'get',
             url:'generar-promociones.php',
             data:{
-              catalogo:'promo2'
+               // valor:$("#valor").val()
             },
             contentType:'application/json',
             success:function(resultado){
@@ -210,29 +207,21 @@ INICIA CATALOGO A DOS COLUMNAS
                    for(i=0;i<resultado.length;i++){
                        numero=numero+i;
                         var pos=''+resultado[i].posicion;
-              var mapita="mapita"+i;
-           
-             
-                      $("#total").append('<div class="container-fluid "> <div class="row"> <div class="col-md-6 columna-izquierda margenes">   <h2 id="titulo-hotel">'+resultado[i].mensaje+'</h2><center> <img class="margenes" id="uno" src="'+resultado[i].imagen+'"></center><h3>'+resultado[i].precios+'</h3><p>'+resultado[i].direccion+'</p><a class="btn btn-success">Checar precios</a></div><div class="col-md-6 columna-izquierda"><h2>Nuestra ubicación</h2><center><h4>Teléfono: '+resultado[i].telefono+'</h4></center><div class="map_canvas '+mapita+'"></div><center><p>'+resultado[i].mensaje+'</p><br><p>'+resultado[i].direccion+'</p></center></div></div></div> ');
-                $('.'+mapita).gmap({ 'center': pos });
-    
-               
-                  //   $('.'+mapita).gmap('addMarker', { /*id:'m_1',*/ 'position': pos, 'bounds': true } );  
-                      $('.'+mapita).gmap('option', 'zoom', 13);
-
-             /*   
-         
-            $(".mapita").gmap().bind('init', function(ev, map) {
+          
+            $('.dos').gmap().bind('init', function(ev, map) {
             
-	        $(".mapita").gmap('addMarker', {'position': pos, 'bounds': true}).click(function() {
+	        $('.dos').gmap('addMarker', {'position': pos, 'bounds': true}).click(function() {
 		//$('.map_canvas').gmap('openInfoWindow', {'content': 'Hotel Asturias'}, this);
                
                 
 	        });
-              $(".mapita").gmap('option', 'zoom', 10);
+              $('.dos').gmap('option', 'zoom', 10);
     
-            });*/
-      
+            });
+                      $("#total").append('<div class="container-fluid "> <center>  <h1>Catálogo de hoteles No.'+numero+'+</h1></center><div class="row"> <div class="col-md-6 columna-izquierda margenes">   <h2 id="titulo-hotel">'+resultado[i].mensaje+'</h2><center> <img class="margenes" id="uno" src="'+resultado[i].imagen+'"></center><h3>30% de descuento si reservas en las próximas 24 horas</h3><p>'+resultado[i].direccion+'</p><a class="btn btn-success">Checar precios</a></div><div class="col-md-6 columna-izquierda"><h2>Nuestra ubicación</h2><center><h4>Hotel Casino Royal</h4></center><div class="map_canvas dos"></div><p>'+resultado[i].mensaje+'</p></div></div></div> ');
+               
+              
+             
         
         }//TERMINA CICLO FORCITO DEL CARGADO DE TODAS LAS PROMOCIONES
             },
@@ -241,7 +230,10 @@ INICIA CATALOGO A DOS COLUMNAS
               }
            });
            
-         
+           $("#1").click(function(){
+            alert('haz hecho click en el segundo');   
+           });
+        
                 
             
          

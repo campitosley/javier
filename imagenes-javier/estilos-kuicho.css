@@ -8,7 +8,7 @@ body {
 }
 @font-face{
     font-family: yo1;
-    src:url(../font/Amatic-Bold.ttf);
+    src:url(../font/Amble-Regular.ttf);
 }
 @font-face{
     font-family:yo2;
@@ -217,7 +217,19 @@ p{
   letter-spacing: -1px;
 }
 
-
+#contador{
+    width:150px;
+    height: 40px;
+    position: fixed;
+    top:0;
+    right:-7px;
+    border-radius: 7px;
+    font-size: 11px;
+    background: #38843a;
+    padding: 3px;
+    color:  #fff;
+    z-index: 999;
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
@@ -275,6 +287,9 @@ p{
     .carousel {
   height: 300px;
   margin-bottom: 60px;
+}
+#contador{
+    display: none;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {

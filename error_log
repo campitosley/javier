@@ -1,0 +1,2 @@
+[01-Apr-2014 15:04:14 UTC] PHP Fatal error:  Call to undefined function stripslashes_deep() in /home/campitoskuicho/public_html/generar-promociones.php on line 42
+[01-Apr-2014 15:04:41 UTC] PHP Fatal error:  Call to undefined function stripslashes_deep() in /home/campitoskuicho/public_html/generar-promociones.php on line 42

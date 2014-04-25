@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+      <div id="fb-root"></div>
+ <script>
+   window.fbAsyncInit = function() {
+     FB.init({appId: '697710973584460', status: true, cookie: true,
+              xfbml: true});
+
+   };
+ 
+   (function() {
+     var e = document.createElement('script'); e.async = true;
+     e.src = document.location.protocol +
+       '//connect.facebook.net/es_LA/all.js';
+     document.getElementById('fb-root').appendChild(e);
+
+   }());
+ </script>
+<a href="javascript:void(0)" onclick="FB.ui({
+  method: 'send',
+  to:'rapidclimate'    ,  
+  caption: 'Promociones',
+    description: 'Ejemplos de dialogos', 
+  link: 'http://kuicho.com/hoteles.html'
+});
+">Click me</a>
+      
+    </body>
+</html>

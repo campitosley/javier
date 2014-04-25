@@ -20,23 +20,25 @@ if (mysqli_connect_errno())
    //   mysqli_query($con,"INSERT INTO informacion (promocion,mensaje, direccion,imagen)
 //VALUES ('esto es una promo no 2', 'Ven a hospedarte al mejor hotel de la region','domiciolio conocido','algo.jpg')");
 // echo 'Se hizo la insercion'.'<br>';
-$mipromo;
+$promo=$_GET["catalogo"];
 $mimensaje;
 $midireccion;
 $miimagen;
 $miposicion;
 $arr=array();
- $result = mysqli_query($con,"SELECT * FROM informacion");
+ $result = mysqli_query($con,"SELECT * FROM informacion WHERE promocion='$promo'");
  while($fila=  mysqli_fetch_array($result)){
 $mipromo = $fila['promocion'];
 $mimensaje = $fila['mensaje'];
 $midireccion=$fila['direccion'];
 $miimagen =$fila['imagen'];
 $miposicion=$fila['posicion'];
+$mitelefono=$fila['telefono'];
+$miprecios=$fila['precios'];
 
 
 
-array_push($arr,array('promocion' => $mipromo, 'mensaje' => $mimensaje,'direccion' => $midireccion, 'imagen' => $miimagen,'posicion' =>$miposicion ));
+array_push($arr,array('promocion' => $mipromo, 'mensaje' => $mimensaje,'direccion' => $midireccion, 'imagen' => $miimagen,'posicion' =>$miposicion,'telefono' =>$mitelefono,'precios' =>$miprecios ));
 }
 
 //$arr2=array('mispromociones' => $arr);

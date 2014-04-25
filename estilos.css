@@ -227,7 +227,9 @@ h4{
     display: none;
 }
 #facebook-desktop{
+    width:500px;
     display: block;
+    margin:0 auto;
 }
 
 .map_canvas{
@@ -237,10 +239,21 @@ h4{
     margin:  0 auto;
     border:#c0c0c0 solid thin;
 }
+.map_canvas2{
+    width:580px;
+    height: 380px;
+    background: #38843a;
+    margin:  0 auto;
+    border:#c0c0c0 solid thin;
+}
 .ubiacion-exacta{
     margin-top: -100px;
     position: relative;
     z-index:90;
+}
+td{
+     margin:5px;
+     padding: 5px;
 }
 
 /* RESPONSIVE CSS

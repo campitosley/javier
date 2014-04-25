@@ -4,6 +4,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+
 <html>
     <head>
         <title>kuicho</title>
@@ -13,6 +14,11 @@ and open the template in the editor.
         <link rel="stylesheet" href="imagenes-javier/estilos-kuicho.css">
     </head>
     <body>
+        <div id='contador'>
+       
+      <?php include("simphp.php"); ?> 
+       
+       </div>
         <!--facebook -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -52,7 +58,9 @@ and open the template in the editor.
                       <li><a href="hoteles.html"><span class="glyphicon glyphicon-briefcase"></span>   Hoteles</a></li>
                     <li><a  href="restaurantes.html"><span class="glyphicon glyphicon-cutlery"></span>    Restaurantes</a></li>
                     <li><a id="artesanias" href="hoteles.html"><span class="glyphicon glyphicon-gift"></span>   Tiendas de artesanías</a></li>
-                    <li><a id="hoteles" href="hoteles.html"><span class="glyphicon glyphicon-leaf"></span>  Temazcales</a></li>
+                    <li><a id="lugares" href="lugares.html"><span class="glyphicon glyphicon-gift"></span>   Lugares de interés</a></li>
+                    <li><a id="fiestas" href="fiestas.html"><span class="glyphicon glyphicon-leaf"></span>  Fiestas y tradiciones</a></li>
+                    <li><a id="otros" href="hoteles.html"><span class="glyphicon glyphicon-gift"></span>   Otros servicios</a></li>
                     <li class="divider"></li>
                     <li><a  id="medicos"  href="#"><span class="glyphicon glyphicon-plus-sign"></span>    Médicos</a></li>
                     <li><a  id="policias" href="#"><span class="glyphicon glyphicon-phone"></span>    Policía</a></li>
@@ -61,7 +69,7 @@ and open the template in the editor.
                 <li class="active"><a href="index.html">Inicio</a></li>
                 <li><a href="paquetes.html">Paquetes</a></li>
                 <li><a href="promociones.html">Promociones</a></li>
-                
+                <li><a href="contacto.html">Contacto</a></li>
               </ul>
             </div>
           </div>
@@ -88,7 +96,7 @@ and open the template in the editor.
                 
               <h1>Hoteles</h1>
               <p><strong>El mejor lugar para olvidarse del estrés</strong> Un lugar único para relajarse, un sitio cerca de la ciudad de México, rodeado de  montañas, aire limpio y lleno de misticismo y magia!</p>
-              <p><a class="btn btn-lg btn-success" href="promociones.html" role="button">Más información</a></p>
+              <p><a class="btn btn-lg btn-success" href="hoteles.html" role="button">Más información</a></p>
             </div>
           </div>
         </div>
@@ -98,7 +106,7 @@ and open the template in the editor.
             <div class="carousel-caption">
               <h1>Restaurantes</h1>
               <p><strong>Una fiesta para el paladar </strong> Ven a disfrutar de la tradicional y deliciosa cocina mexicana, con platillos únicos del méxico prehispánico.</p>
-              <p><a class="btn btn-lg btn-success" href="#" role="button">Más información</a></p>
+              <p><a class="btn btn-lg btn-success" href="restaurantes.html" role="button">Más información</a></p>
             </div>
           </div>
         </div>
@@ -108,7 +116,7 @@ and open the template in the editor.
             <div class="carousel-caption">
               <h1>Otros servicios</h1>
               <p><strong>Conciente a tu cuerpo con ésta tradición ancestral  </strong>   Rodeado de un ambiente mágico y único, el temazcal te llenará de energ´ia positiva y te recargará la pila para toda la semana</p>
-              <p><a class="btn btn-lg btn-success" href="#" role="button">Más información</a></p>
+              <p><a class="btn btn-lg btn-success" href="temazcales.html" role="button">Más información</a></p>
            
             </div>
           </div>

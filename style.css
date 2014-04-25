@@ -57,3 +57,7 @@ pre.prettyprint { background:#f4f4f4; padding: 1.5em; border:none; margin: 0 0 1
 .forum label, .forum input[type="text"] { margin: 0 1em 0 0; }
 .forum label { font-weight:bold; }
 .forum input[type="text"] { border:none; background:#fff; outline:none; padding:5px; width:200px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; -khtml-border-radius:5px; }
+td{
+    padding: 5px;
+    height: 12px;
+}
